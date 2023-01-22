@@ -1,0 +1,13 @@
+// scss 外部檔案
+
+@import 'base/common';
+@import 'base/font';
+@import 'base/color';
+@import 'component/btn';
+@import 'mixin/mixin';
+
+// css => @import url();
+
+body{
+    position: relative;
+}

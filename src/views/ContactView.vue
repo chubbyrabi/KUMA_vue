@@ -1,5 +1,5 @@
 <template>
-	<div class="about">
+	<div class="contact">
 
 	</div>
 </template>
@@ -9,7 +9,7 @@
 // import Header from '@/components/Header.vue'
 
 export default {
-    name: 'AboutView',
+    name: 'ContactView',
     components: {
     // Header
     }

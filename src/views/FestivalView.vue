@@ -1,6 +1,6 @@
 <template>
-	<div class="about">
-
+	<div class="festival">
+        <router-view></router-view>
 	</div>
 </template>
 
@@ -9,7 +9,7 @@
 // import Header from '@/components/Header.vue'
 
 export default {
-    name: 'AboutView',
+    name: 'FestivalView',
     components: {
     // Header
     }

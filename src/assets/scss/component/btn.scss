@@ -1,0 +1,161 @@
+// class名稱
+// .btn-teal        按鈕:湖綠色
+// .btn-white       按鈕:白色
+// .btn-success     按鈕:綠色
+// .btn-success_2nd 按鈕:白底綠框
+// .btn-danger      按鈕:紅色
+// .btn-danger_2nd  按鈕:白底紅框
+
+// border (粗細, 顏色, 圓角)
+@mixin border($bdrPx, $bdrClr, $bdrs){
+    border: $bdrPx solid $bdrClr;
+    border-radius: $bdrs;
+    @content;
+}
+
+// padding (上下, 左右)
+@mixin btnPadding($TB, $LR){
+    padding: $TB+px $LR+px;
+    // @include maxW($maxWidth){
+    //     padding: ($TB/5)*4+px ($LR/2)+px;
+    // }
+    // @include maxW(480px){
+    //     padding: ($TB/5)*3+px ($LR/2)+px;
+    //     font-size: 12px;
+    //     font-weight: 500;
+    // }
+    @content;
+}
+
+// font (粗細, 尺寸)
+@mixin btnFont($weight, $size){
+    font-family: 'NeverMind';
+    font-weight: $weight;
+    font-size: $size+px;
+    letter-spacing: 0;
+    // @media (max-width: 767px){
+    //     font-weight: $weight;
+    //     font-size: ($size - 2)+px;
+    // }
+    @content;
+}
+
+// 按鈕樣式
+%btn-Style{
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    letter-spacing: 0.05em;
+    transition: $trs3;
+    @include btnPadding(10, 50);
+    @include btnFont(700, 24);
+}
+
+$btn-type:
+'teal', 'white',
+'success', 'success_2nd',
+'danger' , 'danger_2nd' ;
+
+@each $type in $btn-type{
+    .btn-#{$type}{
+        @extend %btn-Style;
+    }
+}
+
+// 單色按鈕
+@mixin btn-plain_1st($btn-clr){
+    background: $btn-clr;
+    color: $clr_fff;
+    @include border(2px, $btn-clr, 0px);
+    &:hover{
+        background: $clr_fff;
+        color: $btn-clr;
+        transition: $trs3;
+        &::after{
+            position: absolute;
+            top: -30px;
+            right: -40px;
+            content: '';
+            background-position: center;
+            background-size: contain;
+            width: 45px;
+            height: 35px;
+            transform: none;
+        }
+    }
+    &:active{
+        background: $btn-clr;
+    }
+    &:focus-visible{
+        outline: 3px solid darken($btn-clr, 10);
+    }
+    &:focus:not(:focus-visible){
+        outline: none;
+    }
+    &:disabled{
+        background: $clr_gray_L4;
+        color: $clr_gray_L2;
+    }
+    @content;
+}
+
+// 單色外框按鈕
+@mixin btn-plain_2nd ($btn-clr){
+    background: $clr_fff;
+    color: $btn-clr;
+    @include border(2px, $btn-clr, 0px);
+    &:hover{
+        background: $btn-clr;
+        color: $clr_fff;
+        transition: $trs3;
+    }
+    &:active{
+        background: darken($btn-clr, 10);
+    }
+    &:focus-visible{
+        border: transparent;
+        outline: 3px solid darken($btn-clr, 10);
+    }
+    &:focus:not(:focus-visible){
+        outline: none;
+    }
+    &:disabled{
+        background: $clr_gray_L4;
+        color: $clr_gray_L2;
+    }
+    @content;
+}
+
+// 按鈕:湖綠色
+.btn-teal{
+    @include btn-plain_1st($clr_teal_L0);
+    &:hover::after{
+        background-image: url("/src/assets/img/deco/shock-teal-40deg_R.svg");
+    }
+}
+// 按鈕:白底湖綠色
+.btn-white{
+    @include btn-plain_1st($clr_teal_L0);
+    @include border(2px, $clr_fff, 0px);
+    &:hover::after{
+        background-image: url("/src/assets/img/deco/shock-fff-40deg_R.svg");
+    }
+}
+// 按鈕:綠色
+.btn-success{
+    @include btn-plain_1st($clr_success);
+}
+// 按鈕:紅色
+.btn-danger{
+    @include btn-plain_1st($clr_danger);
+}
+// 按鈕:白底綠框
+.btn-success_2nd{
+    @include btn-plain_2nd($clr_success);
+}
+// 按鈕:白底紅框
+.btn-danger_2nd{
+    @include btn-plain_2nd($clr_danger);
+}

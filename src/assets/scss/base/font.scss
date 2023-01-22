@@ -1,0 +1,183 @@
+
+// 字型的class名稱
+// .font-40 		H1
+// .font-36 		H2
+// .font-32			H3
+// .font-28 		H4
+// .font-24			H5
+// .font-20			H6
+// .font-18			段落標題/按鈕
+// .font-16			按鈕/麵包屑
+// .font-16-15em	內文:窄行高
+// .font-16-24em	內文:寬行高
+// .font-14			輸入框下方提示字
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
+
+// 中文字型
+%font-style{
+    font-family: 'Noto Sans TC', 微軟正黑體;
+	line-height: 1.2em;
+	letter-spacing: 0.1em;
+	text-align: justify;
+}
+
+// DemiBold
+$font-size-B: 40, 36, 32, 28, 24;
+@each $size in $font-size-B{
+	.font-#{$size}{
+		@extend %font-style;
+		font-weight: 600;
+		font-size: $size + px;
+	}
+}
+
+// Regular
+$font-size-R: 20, 18, 16, 14;
+@each $size in $font-size-R{
+	.font-#{$size}{
+		@extend %font-style;
+		font-weight: 400;
+		font-size: $size + px;
+	}
+}
+
+// line-height
+$font-lh: 15, 24;
+@each $lh in $font-lh{
+	.font-16-#{$lh}em{
+		font: 400 16px / #{$lh/10} + em 'Noto Sans TC';
+		letter-spacing: 0.15em;
+		text-align: justify;
+	}
+}
+
+// font: font-weight font-size/line-height font-family;
+
+// @font-face {
+// 	font-family: 'Noto Sans TC';
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Black.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Bold.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-DemiLight.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Light.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Medium.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Regular.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansCJKtc-Thin.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansMonoCJKtc-Bold.otf');
+// 	src: url('/src/assets/font/NotoSans/NotoSansMonoCJKtc-Regular.otf');
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Thin.ttf');
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Thinitalic.ttf');
+//     font-weight: 300;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-ExtraLight.ttf');
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-ExtraLightitalic.ttf');
+//     font-weight: 400;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Light.ttf');
+//     font-weight: 500;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Lightitalic.ttf');
+//     font-weight: 500;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Regular.ttf');
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Regularitalic.ttf');
+//     font-weight: 600;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Medium.ttf');
+//     font-weight: 700;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Mediumitalic.ttf');
+//     font-weight: 700;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-DemiBold.ttf');
+//     font-weight: 800;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-DemiBolditalic.ttf');
+//     font-weight: 800;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Bold.ttf');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+// }
+// @font-face{
+//     font-family: NeverMind;
+//     src: url('/src/assets/font/NeverMind/NeverMind-Bolditalic.ttf');
+//     font-weight: 900;
+//     font-style: italic;
+//     font-display: swap;
+//     unicode-range: U+00-024F;
+//     // U+00-024F 英文語系
+//     // U+4E00-9FFF 中日韓語系
+// }

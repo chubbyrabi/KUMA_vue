@@ -1,0 +1,105 @@
+header{
+    outline: 1px solid red;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background: $clr_fff;
+    transition: 1s;
+    .navbar{
+        max-width: 1380px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        margin: auto;
+        .KUMA-logo{
+            height: 30px;
+            width: auto;
+            fill: $clr_gray_L0;
+            transition: $trs5;
+            &:hover{
+                fill: $clr_teal_L0;
+                transition: $trs3;
+            }
+        }
+        .nav-hb{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            z-index: 2;
+            span{
+                position: absolute;
+                display: block;
+                width: 30px;
+                height: 2.4px;
+                transform: rotate(0deg);
+                transition: $trs5;
+                background: $clr_gray_L0;
+                &:nth-child(1){
+                    top: 3.8px;
+                }
+                &:nth-child(2){
+                    top: 13.8px;
+                    opacity: 1;
+                }
+                &:nth-child(3){
+                    top: 23.8px;
+                }
+            }
+            &:hover{
+                cursor: pointer;
+                span{
+                    background: $clr_teal_L0;
+                    transition: $trs3;
+                }
+            }
+            &.on{
+                span{
+                    background: $clr_fff;
+                    &:nth-child(1){
+                        top: 13.8px;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        top: 13.8px;
+                        transform: rotate(-45deg);
+                    }
+                }
+                &:before{
+                    position: absolute;
+                    right: 130%;
+                    content: 'Close';
+                    font-family: 'Noto Sans TC';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 1.6em;
+                    letter-spacing: 0.05em;
+                    color: $clr_fff;
+                }
+            }
+        }
+        .nav-menu{
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: 100vh;
+            width: 80%;
+            padding: 10%;
+            background-color: #00ADBB;
+            opacity: 0;
+            transition: opacity 0.5s, left 0s 0.5s;
+            
+            width: calc(100% - 240px);
+            padding: 0 120px;
+            background: $clr_teal_L0;
+        }
+        .nav-hb.on + .nav-menu{
+            left: 0;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+    }
+}

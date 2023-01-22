@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
+.font-14, .font-16, .font-18, .font-20, .font-24, .font-28, .font-32, .font-36, .font-40 {
+  font-family: "Noto Sans TC", 微軟正黑體;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-align: justify;
+}
+
+.font-40 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.font-36 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.font-32 {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.font-28 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.font-24 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.font-20 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.font-18 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.font-16 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.font-14 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.font-16-15em {
+  font: 400 16px/1.5em "Noto Sans TC";
+  letter-spacing: 0.15em;
+  text-align: justify;
+}
+
+.font-16-24em {
+  font: 400 16px/2.4em "Noto Sans TC";
+  letter-spacing: 0.15em;
+  text-align: justify;
+}
+
+body {
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

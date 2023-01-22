@@ -1,6 +1,6 @@
 <template>
-	<div class="about">
-
+	<div class="correction_tape">
+        <p>correction_tape</p>
 	</div>
 </template>
 
@@ -9,7 +9,7 @@
 // import Header from '@/components/Header.vue'
 
 export default {
-    name: 'AboutView',
+    name: 'Correction_tapeView',
     components: {
     // Header
     }

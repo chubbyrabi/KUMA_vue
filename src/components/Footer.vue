@@ -1,5 +1,5 @@
 <template>
-	<div class="home">
+	<div class="footer">
 
 	</div>
 </template>
@@ -9,12 +9,11 @@
 	// import Header from '@/components/Header.vue'
 
 	export default {
-		name: 'HomeView',
+		name: 'FooterView',
 		components: {
 		// Header
 		}
 	}
 </script>
 <style scoped lang="scss">
-
 </style>
