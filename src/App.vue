@@ -41,7 +41,6 @@ export default{
         this.addClassEN();
     },
 }
-
 </script>
 
 <style lang="scss">
