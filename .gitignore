@@ -2,6 +2,7 @@
 node_modules
 /dist
 /src/assets/font
+cheat_sheet.txt
 
 # local env files
 .env.local
