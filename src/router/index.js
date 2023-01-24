@@ -13,7 +13,7 @@ const routes = [
 			{ property: 'og:type', content: 'website' },
 			{ property: 'og:title', content: 'KUMA | 陪伴你的好橡皮' },
 			{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/' },
-			{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/' },
+			{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 			{ property: 'og:site_name', content: 'KUMA' },
 			{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 		]
@@ -29,7 +29,7 @@ const routes = [
 				{ property: 'og:type', content: 'website' },
 				{ property: 'og:title', content: 'KUMA | 商品情報' },
 				{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/product' },
-				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/product' },
+				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 				{ property: 'og:site_name', content: 'KUMA' },
 				{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 			]
@@ -50,7 +50,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 商品情報：橡皮擦' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/product/eraser' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/product/eraser' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -67,7 +67,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 商品情報：修正帶' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/product/correction_tape' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/product/correction_tape' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -84,7 +84,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 商品情報：鉛筆' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/product/pencil' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/product/pencil' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -101,7 +101,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 商品情報：自動鉛筆' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/product/graph' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/product/graph' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -119,7 +119,7 @@ const routes = [
 				{ property: 'og:type', content: 'website' },
 				{ property: 'og:title', content: 'KUMA | 50 周年慶典' },
 				{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/festival' },
-				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/festival' },
+				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 				{ property: 'og:site_name', content: 'KUMA' },
 				{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 			]
@@ -137,7 +137,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 50 周年慶典：生日應援' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/support' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/support' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -154,7 +154,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 50 周年慶典：紀念特展' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/expo' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/expo' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -171,7 +171,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 限定商店' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/store' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/store' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -188,7 +188,7 @@ const routes = [
 						{ property: 'og:type', content: 'website' },
 						{ property: 'og:title', content: 'KUMA | 50 周年慶典：遊行巴士' },
 						{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/tour_bus' },
-						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/festival/tour_bus' },
+						{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 						{ property: 'og:site_name', content: 'KUMA' },
 						{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 					]
@@ -206,7 +206,7 @@ const routes = [
 				{ property: 'og:type', content: 'website' },
 				{ property: 'og:title', content: 'KUMA | 最新消息' },
 				{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/news' },
-				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/news' },
+				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 				{ property: 'og:site_name', content: 'KUMA' },
 				{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 			]
@@ -223,7 +223,7 @@ const routes = [
 				{ property: 'og:type', content: 'website' },
 				{ property: 'og:title', content: 'KUMA | 聯絡管道' },
 				{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/contact' },
-				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/contact' },
+				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 				{ property: 'og:site_name', content: 'KUMA' },
 				{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 			]
@@ -240,7 +240,7 @@ const routes = [
 				{ property: 'og:type', content: 'website' },
 				{ property: 'og:title', content: 'KUMA | 關於我們' },
 				{ property: 'og:url', content: 'https://chubbyrabi.github.io/KUMA_vue/about' },
-				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/about' },
+				{ property: 'og:image', content: 'https://chubbyrabi.github.io/KUMA_vue/img/icons/og-img.png' },
 				{ property: 'og:site_name', content: 'KUMA' },
 				{ property: 'og:description', content: '陪你走過人生中的大小時刻，當你有需要，我們一直都在｜KUMA' }
 			]
