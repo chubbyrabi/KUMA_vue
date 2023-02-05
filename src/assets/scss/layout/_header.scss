@@ -1,39 +1,51 @@
 header{
-    outline: 1px solid red;
     width: 100%;
     position: fixed;
     z-index: 2;
     top: 0;
     background: $clr_fff;
     transition: 1s;
+    &.shadow{
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+    }
+    // 導覽列
     .navbar{
-        max-width: 1380px;
+        padding: 2% 10px;
         display: flex;
         justify-content: space-between;
-        padding: 20px 10px;
-        margin: auto;
-        .KUMA-logo{
+        @include minW(1200px){
+            padding: 20px 10px;
+            max-width: 1380px;
+            margin: auto;
+        }
+        // LOGO
+        .nav-logo svg{
             height: 30px;
             width: auto;
             fill: $clr_gray_L0;
-            transition: $trs5;
-            &:hover{
-                fill: $clr_teal_L0;
-                transition: $trs3;
+            transition: 0.5s;
+            @include minW(1200px){
+                &:hover{
+                    fill: $clr_teal_L0;
+                    transition: 0.3s;
+                }
             }
         }
+        // 漢堡
         .nav-hb{
             position: relative;
             width: 30px;
             height: 30px;
             z-index: 2;
+            // 橫線
             span{
                 position: absolute;
                 display: block;
                 width: 30px;
                 height: 2.4px;
                 transform: rotate(0deg);
-                transition: $trs5;
+                transition: 0.5s;
                 background: $clr_gray_L0;
                 &:nth-child(1){
                     top: 3.8px;
@@ -46,14 +58,17 @@ header{
                     top: 23.8px;
                 }
             }
-            &:hover{
-                cursor: pointer;
-                span{
-                    background: $clr_teal_L0;
-                    transition: $trs3;
+            @include minW(1200px){                
+                &:hover{
+                    cursor: pointer;
+                    span{
+                        background: $clr_teal_L0;
+                        transition: 0.3s;
+                    }
                 }
             }
             &.on{
+                // 叉叉
                 span{
                     background: $clr_fff;
                     &:nth-child(1){
@@ -68,19 +83,23 @@ header{
                         transform: rotate(-45deg);
                     }
                 }
-                &:before{
-                    position: absolute;
-                    right: 130%;
-                    content: 'Close';
-                    font-family: 'Noto Sans TC';
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 1.6em;
-                    letter-spacing: 0.05em;
-                    color: $clr_fff;
+                // Close
+                @include minW(1200px){
+                    &:before{
+                        position: absolute;
+                        right: 130%;
+                        content: 'Close';
+                        font-family: 'Noto Sans TC';
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 1.6em;
+                        letter-spacing: 0.05em;
+                        color: $clr_fff;
+                    }
                 }
             }
         }
+        // 選單
         .nav-menu{
             position: absolute;
             top: 0;
@@ -88,18 +107,111 @@ header{
             height: 100vh;
             width: 80%;
             padding: 10%;
-            background-color: #00ADBB;
+            background: $clr_teal_L0;
             opacity: 0;
             transition: opacity 0.5s, left 0s 0.5s;
-            
-            width: calc(100% - 240px);
-            padding: 0 120px;
-            background: $clr_teal_L0;
-        }
-        .nav-hb.on + .nav-menu{
-            left: 0;
-            opacity: 1;
-            transition: opacity 0.5s;
+            @include minW(1200px){
+                width: calc(100% - 240px);
+                padding: 0 120px;
+            }
+            // 主選單
+            .parent-list{
+                position: relative;
+                left: -100%;
+                transition: 0.5s;
+                @include minW(1200px){
+                    max-width: 1200px;
+                    margin: auto;
+                    left: 0; // 不要動畫
+                    top: 50%;
+                    transform: translateY( -50%);
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-template-columns: 3fr 4fr 280px;
+                    gap: 50px 30px;
+                    >a{
+                        grid-row: 1/4;
+                    }
+                }
+                // LOGO
+                svg{
+                    width: 180px;
+                    margin: 16px 12px 12px;
+                    fill: $clr_fff;
+                    transition: 0.3s;
+                    @include minW(1200px){
+                        &:hover{
+                            fill: $clr_teal_L1;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+                // 標題文字
+                >li{
+                    position: relative;
+                    margin: 12px;
+                    line-height: 2.4em;
+                    span{
+                        color: $clr_fff;
+                        letter-spacing: 0.05em;
+                        vertical-align: top;
+                        // 英文
+                        &:first-child{
+                            font-family: 'NeverMind';
+                            font-size: 26px;
+                            font-weight: 800;
+                            margin-right: 8px;
+                            @include minW(1200px){
+                                font-size: 30px;
+                            }
+                        }
+                        // 中文
+                        &:last-child{
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                    // 驚嚇圖案
+                    @include minW(1200px){
+                        >a:hover::before{
+                            position: absolute;
+                            top: -12px;
+                            left: -22px;
+                            content: '';
+                            background-image: url('/src/assets/img/deco/shock-fff-40deg_L.svg');
+                            width: 32px;
+                            height: 25px;
+                        }
+                    }
+                }
+                // 次選單
+                .child-list{
+                    line-height: 1.5em;
+                    li{
+                        display: inline-block;
+                        margin: 7px;
+                        color: $clr_fff;
+                        opacity: 0.6;
+                        transition: 0.3s;
+                        @include minW(1200px){
+                            &:hover{
+                                color: $clr_gray_L0;
+                                transition: 0.15s;
+                            }
+                        }
+                    }
+                }
+            }
+            // 選單打開
+            &.on{
+                left: 0;
+                opacity: 1;
+                transition: opacity 0.5s;
+                .parent-list{
+                    left: 0;
+                    transition: 0.5s;
+                }
+            }
         }
     }
 }

@@ -4,6 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import { globalMixin } from './assets/js/globalMixin'
+// import $ from 'jquery'
+// window.$ = window.jQuery = $
 
 createApp(App)
 .use(store)

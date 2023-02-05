@@ -48,7 +48,7 @@
     text-decoration: none;
     vertical-align: middle;
     letter-spacing: 0.05em;
-    transition: $trs3;
+    transition: 0.3s;
     @include btnPadding(10, 50);
     @include btnFont(700, 24);
 }
@@ -72,7 +72,7 @@ $btn-type:
     &:hover{
         background: $clr_fff;
         color: $btn-clr;
-        transition: $trs3;
+        transition: 0.3s;
         &::after{
             position: absolute;
             top: -30px;
@@ -109,7 +109,7 @@ $btn-type:
     &:hover{
         background: $btn-clr;
         color: $clr_fff;
-        transition: $trs3;
+        transition: 0.3s;
     }
     &:active{
         background: darken($btn-clr, 10);
