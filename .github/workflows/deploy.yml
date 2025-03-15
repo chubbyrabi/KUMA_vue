@@ -36,10 +36,3 @@ jobs:
           branch: gh-pages  # 部署的目标分支
           folder: dist      # 部署的文件夹，应该是构建结果的文件夹
           token: ${{ secrets.GITHUB_TOKEN }}  # 传递 token 用于认证
-
-      # 如果需要强制推送的操作，可以去除 Github Pages Action 并保留此步骤
-      - name: Force push to gh-pages (optional)
-        run: |
-          git add -A
-          git commit -m "Deploy to gh-pages" || echo "No changes to commit"
-          git push --force origin gh-pages
