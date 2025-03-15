@@ -5,8 +5,8 @@ on:
     branches:
       - master  # 确保这是你要触发部署的分支
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
 jobs:
   deploy:
