@@ -1,6 +1,21 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
+body {
+  position: relative;
+  padding-top: calc(6% + 30px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+span {
+  display: inline-block;
+}
+
 .font-14, .font-16, .font-18, .font-20, .font-24, .font-28, .font-32, .font-36, .font-40 {
   font-family: "Noto Sans TC", 微軟正黑體;
   line-height: 1.2em;
@@ -65,8 +80,223 @@
   text-align: justify;
 }
 
-body {
+.btn-danger_2nd, .btn-danger, .btn-success_2nd, .btn-success, .btn-white, .btn-teal {
+  cursor: pointer;
   position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+  transition: 0.3s;
+  padding: 10px 50px;
+  font-family: "NeverMind";
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.btn-teal {
+  background: #00ADBB;
+  color: #FFFFFF;
+  border: 2px solid #00ADBB;
+  border-radius: 0px;
+}
+.btn-teal:hover {
+  background: #FFFFFF;
+  color: #00ADBB;
+  transition: 0.3s;
+}
+.btn-teal:hover::after {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  width: 45px;
+  height: 35px;
+  transform: none;
+}
+.btn-teal:active {
+  background: #00ADBB;
+}
+.btn-teal:focus-visible {
+  outline: 3px solid #007e88;
+}
+.btn-teal:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-teal:disabled {
+  background: #E6E6E6;
+  color: #888888;
+}
+.btn-teal:hover::after {
+  background-image: url("/src/assets/img/deco/shock-teal-40deg_R.svg");
+}
+
+.btn-white {
+  background: #00ADBB;
+  color: #FFFFFF;
+  border: 2px solid #00ADBB;
+  border-radius: 0px;
+  border: 2px solid #FFFFFF;
+  border-radius: 0px;
+}
+.btn-white:hover {
+  background: #FFFFFF;
+  color: #00ADBB;
+  transition: 0.3s;
+}
+.btn-white:hover::after {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  width: 45px;
+  height: 35px;
+  transform: none;
+}
+.btn-white:active {
+  background: #00ADBB;
+}
+.btn-white:focus-visible {
+  outline: 3px solid #007e88;
+}
+.btn-white:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-white:disabled {
+  background: #E6E6E6;
+  color: #888888;
+}
+.btn-white:hover::after {
+  background-image: url("/src/assets/img/deco/shock-fff-40deg_R.svg");
+}
+
+.btn-success {
+  background: #6C9255;
+  color: #FFFFFF;
+  border: 2px solid #6C9255;
+  border-radius: 0px;
+}
+.btn-success:hover {
+  background: #FFFFFF;
+  color: #6C9255;
+  transition: 0.3s;
+}
+.btn-success:hover::after {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  width: 45px;
+  height: 35px;
+  transform: none;
+}
+.btn-success:active {
+  background: #6C9255;
+}
+.btn-success:focus-visible {
+  outline: 3px solid #547242;
+}
+.btn-success:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-success:disabled {
+  background: #E6E6E6;
+  color: #888888;
+}
+
+.btn-danger {
+  background: #941111;
+  color: #FFFFFF;
+  border: 2px solid #941111;
+  border-radius: 0px;
+}
+.btn-danger:hover {
+  background: #FFFFFF;
+  color: #941111;
+  transition: 0.3s;
+}
+.btn-danger:hover::after {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  width: 45px;
+  height: 35px;
+  transform: none;
+}
+.btn-danger:active {
+  background: #941111;
+}
+.btn-danger:focus-visible {
+  outline: 3px solid #660c0c;
+}
+.btn-danger:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-danger:disabled {
+  background: #E6E6E6;
+  color: #888888;
+}
+
+.btn-success_2nd {
+  background: #FFFFFF;
+  color: #6C9255;
+  border: 2px solid #6C9255;
+  border-radius: 0px;
+}
+.btn-success_2nd:hover {
+  background: #6C9255;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.btn-success_2nd:active {
+  background: #547242;
+}
+.btn-success_2nd:focus-visible {
+  border: transparent;
+  outline: 3px solid #547242;
+}
+.btn-success_2nd:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-success_2nd:disabled {
+  background: #E6E6E6;
+  color: #888888;
+}
+
+.btn-danger_2nd {
+  background: #FFFFFF;
+  color: #941111;
+  border: 2px solid #941111;
+  border-radius: 0px;
+}
+.btn-danger_2nd:hover {
+  background: #941111;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.btn-danger_2nd:active {
+  background: #660c0c;
+}
+.btn-danger_2nd:focus-visible {
+  border: transparent;
+  outline: 3px solid #660c0c;
+}
+.btn-danger_2nd:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn-danger_2nd:disabled {
+  background: #E6E6E6;
+  color: #888888;
 }
 
 /*# sourceMappingURL=style.css.map */
