@@ -60,3 +60,10 @@ jobs:
         run: |
           git status
           git remote -v
+
+      - name: Debug git remote URL
+        run: git remote -v
+    
+      - name: Check git config
+        run: git config --list
+        
