@@ -9,6 +9,7 @@
         <p>元素本身的高度：{{objH}}</p><br>
         <p>元素'頂端'離視窗頂部距離：{{objTop}}</p><br>
         <p>元素'底端'離視窗頂部距離：{{objBtop}}</p><br>
+        <p>測試GitHub Actions</p><br>
     </section>
     <hr>
 	<p class="font-14" v-html="text[0].txt+'font-14'"></p>

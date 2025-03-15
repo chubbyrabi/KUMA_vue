@@ -5,7 +5,8 @@
   "scripts": {
     "sass": "sass src/assets/scss/style.scss src/assets/css/style.css --watch",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "GitHub Actions": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.3",
