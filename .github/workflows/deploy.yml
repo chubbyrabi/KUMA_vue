@@ -19,6 +19,13 @@ jobs:
           git config --global user.email "chubbyrabi@gmail.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
+      - name: Check Git status (debugging)
+        run: |
+          git status
+          git remote -v
+          git branch -a
+          git log --oneline --graph
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
