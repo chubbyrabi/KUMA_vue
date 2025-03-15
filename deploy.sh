@@ -1,22 +1,44 @@
-#!/usr/bin/env sh
+name: Deploy Vue app to GitHub Pages
 
-# 發生錯誤時終止腳本
-set -e
+on:
+  push:
+    branches:
+      - master  # 确保这是你要触发部署的分支
 
-# 建立 Vue 專案的 build 產物
-npm run build
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
-# 進入 build 輸出的目錄
-cd dist
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-# 部署到 GitHub Pages
-git init
-git add -A
-git commit -m "deploy"
+      - name: Configure Git
+        run: |
+          git config --global user.name "chubbyrabi"
+          git config --global user.email "chubbyrabi@gmail.com"
 
-# 推送到 gh-pages 分支
-git branch -M master
-git remote add origin https://github.com/chubbyrabi/KUMA_vue.git
-git push -f origin master:gh-pages
+      - name: Show git configuration
+        run: |
+          git config --list
 
-cd -
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the app
+        run: npm run build
+
+      - name: List files in dist
+        run: |
+          ls -al dist  # 查看 dist 目录中的文件
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: dist
