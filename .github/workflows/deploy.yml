@@ -11,10 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # 使用最新版的 checkout
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "chubbyrabi"
+          git config --global user.email "chubbyrabi@gmail.com"
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # 使用最新版的 setup-node
+        uses: actions/setup-node@v2
         with:
           node-version: '20'  # 使用你的 Node.js 版本
 
@@ -29,5 +34,10 @@ jobs:
         with:
           branch: gh-pages  # 部署的目标分支
           folder: dist      # 部署的文件夹，应该是构建结果的文件夹
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 进行认证
+
+      - name: Force push to gh-pages
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git add -A
+          git commit -m "Deploy to gh-pages"
+          git push --force origin gh-pages
