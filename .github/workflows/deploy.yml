@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # 使用最新版的 checkout
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # 使用最新版的 setup-node
         with:
           node-version: '20'  # 使用你的 Node.js 版本
 
@@ -29,3 +29,5 @@ jobs:
         with:
           branch: gh-pages  # 部署的目标分支
           folder: dist      # 部署的文件夹，应该是构建结果的文件夹
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 进行认证
