@@ -55,3 +55,8 @@ jobs:
           git add -A
           git commit -m "Deploy to gh-pages"
           git push --force origin gh-pages
+  
+      - name: Debugging git status
+        run: |
+          git status
+          git remote -v
