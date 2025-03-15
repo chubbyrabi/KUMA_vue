@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[194],{7194:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var t=r(3396);const c={class:"correction_tape"},u=(0,t._)("p",null,"correction_tape",-1),a=[u];function o(e,n,r,u,o,i){return(0,t.wg)(),(0,t.iD)("div",c,a)}var i={name:"Correction_tapeView",components:{}},s=r(89);const p=(0,s.Z)(i,[["render",o]]);var f=p}}]);
+//# sourceMappingURL=194.1103238a.js.map

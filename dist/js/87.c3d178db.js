@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[87],{8087:function(u,n,e){e.r(n),e.d(n,{default:function(){return k}});var r=e(3396);const s={class:"tour_bus"},t=(0,r._)("p",null,"Tour_busView",-1),a=[t];function c(u,n,e,t,c,o){return(0,r.wg)(),(0,r.iD)("div",s,a)}var o={name:"Tour_busView",components:{}},i=e(89);const f=(0,i.Z)(o,[["render",c]]);var k=f}}]);
+//# sourceMappingURL=87.c3d178db.js.map
