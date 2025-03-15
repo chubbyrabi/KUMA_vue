@@ -15,8 +15,8 @@ git add -A
 git commit -m "deploy"
 
 # 推送到 gh-pages 分支
-git branch -M main
+git branch -M master
 git remote add origin https://github.com/chubbyrabi/KUMA_vue.git
-git push -f origin main:gh-pages
+git push -f origin master:gh-pages
 
 cd -
