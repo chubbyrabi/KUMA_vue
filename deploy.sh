@@ -1,43 +1,23 @@
-name: Deploy Vue app to GitHub Pages
+#!/bin/bash
 
-on:
-  push:
-    branches:
-      - master  # 确保这是你要触发部署的分支
+# 配置 Git 用戶信息
+git config --global user.name "chubbyrabi"
+git config --global user.email "chubbyrabi@gmail.com"
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# 生成應用的 build 文件
+npm run build
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+# 切換到 gh-pages 分支（如果需要的話）
+git checkout gh-pages
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "chubbyrabi"
-          git config --global user.email "chubbyrabi@gmail.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+# 拷貝 build 生成的文件
+cp -r dist/* .
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'  # 使用你的 Node.js 版本
+# 添加所有更動
+git add -A
 
-      - name: Install dependencies
-        run: npm install
+# 提交更動
+git commit -m "Deploy to GitHub Pages"
 
-      - name: Build the app
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
-        with:
-          branch: gh-pages  # 部署的目標分支
-          folder: dist      # 部署的文件夾，應該是構建結果的文件夾
-
-      - name: Force push to gh-pages
-        run: |
-          git add -A
-          git commit -m "Deploy to gh-pages"
-          git push --force origin gh-pages
+# 強制推送到 gh-pages 分支
+git push --force origin gh-pages
