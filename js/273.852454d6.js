@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[273],{2273:function(n,e,u){u.r(e),u.d(e,{default:function(){return p}});var c=u(3396);const r={class:"pencil"},t=(0,c._)("p",null,"pencil",-1),a=[t];function i(n,e,u,t,i,s){return(0,c.wg)(),(0,c.iD)("div",r,a)}var s={name:"PencilView",components:{}},l=u(89);const o=(0,l.Z)(s,[["render",i]]);var p=o}}]);
+//# sourceMappingURL=273.852454d6.js.map

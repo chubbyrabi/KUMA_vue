@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[428],{4428:function(n,e,u){u.r(e),u.d(e,{default:function(){return f}});var s=u(3396);const r={class:"news"},t=(0,s._)("p",null,"news",-1),a=[t];function c(n,e,u,t,c,i){return(0,s.wg)(),(0,s.iD)("div",r,a)}var i={name:"NewsView",components:{}},o=u(89);const w=(0,o.Z)(i,[["render",c]]);var f=w}}]);
+//# sourceMappingURL=428.21fd2c09.js.map

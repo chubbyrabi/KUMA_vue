@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[944],{9944:function(n,t,c){c.r(t),c.d(t,{default:function(){return k}});var e=c(3396);const u={class:"contact"},a=(0,e._)("p",null,"contact",-1),r=[a];function o(n,t,c,a,o,s){return(0,e.wg)(),(0,e.iD)("div",u,r)}var s={name:"ContactView",components:{}},i=c(89);const f=(0,i.Z)(s,[["render",o]]);var k=f}}]);
+//# sourceMappingURL=944.d4984485.js.map

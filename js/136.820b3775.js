@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkkuma_vue"]=self["webpackChunkkuma_vue"]||[]).push([[136],{8136:function(e,n,u){u.r(n),u.d(n,{default:function(){return l}});var t=u(3396);const s={class:"festival"},a=(0,t._)("p",null,"festival",-1);function r(e,n,u,r,c,i){const v=(0,t.up)("router-view");return(0,t.wg)(),(0,t.iD)("div",s,[a,(0,t.Wm)(v)])}var c={name:"FestivalView",components:{}},i=u(89);const v=(0,i.Z)(c,[["render",r]]);var l=v}}]);
+//# sourceMappingURL=136.820b3775.js.map
